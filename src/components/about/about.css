@@ -1,0 +1,49 @@
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 10s ease-in-out infinite;
+}
+
+.hero-circle-1 {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  left: -80px;
+  background: #3b82f6;
+}
+
+.hero-circle-2 {
+  width: 260px;
+  height: 260px;
+  bottom: -80px;
+  right: -60px;
+  background: #8b5cf6;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(25px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-circle-1 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-circle-2 {
+    width: 180px;
+    height: 180px;
+  }
+}
